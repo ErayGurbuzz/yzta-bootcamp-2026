@@ -116,7 +116,7 @@ Sprint 1 başlangıcında Trello üzerinde ürün backlog’u oluşturulmuş, an
 
 Backlog ve Current Sprint görünümü:
 
-![Sprint 1 Board](docs/screenshots/sprint1-board.png)
+![Sprint 1 Board](docs/screenshots/sprint1-board-1.png)
 
 Sprint 1 görev akışı ve durum listeleri:
 
