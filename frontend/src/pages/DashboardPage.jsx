@@ -8,7 +8,7 @@ import DocumentUpload from '../components/DocumentUpload.jsx'
 import QuizPanel from '../components/QuizPanel.jsx'
 import StatusMessage from '../components/StatusMessage.jsx'
 
-export default function DashboardPage() {
+export default function DashboardPage({ onNavigate }) {
   const { user, logout } = useAuth()
   const [courses, setCourses] = useState([])
   const [documents, setDocuments] = useState([])
@@ -141,7 +141,12 @@ export default function DashboardPage() {
             <h1 className="text-2xl font-bold">StudyMate</h1>
             <p className="text-sm text-slate-400">Merhaba, {user?.email}</p>
           </div>
-          <button onClick={logout} className="rounded-xl border border-slate-700 px-4 py-2 text-sm text-slate-200 hover:bg-slate-800">Çıkış</button>
+          <div className="flex items-center gap-3">
+            <button onClick={() => onNavigate('study-plan')} className="rounded-xl border border-emerald-700 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-950">Çalışma Planı</button>
+            <button onClick={() => onNavigate('flashcards')} className="rounded-xl border border-indigo-700 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-950">Flashcard</button>
+            <button onClick={() => onNavigate('analytics')} className="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500">Analytics Raporu</button>
+            <button onClick={logout} className="rounded-xl border border-slate-700 px-4 py-2 text-sm text-slate-200 hover:bg-slate-800">Çıkış</button>
+          </div>
         </div>
       </header>
 
