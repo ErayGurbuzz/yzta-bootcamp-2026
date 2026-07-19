@@ -164,9 +164,7 @@ Sprint Review katılımcıları:
 
 # SPRINT 2
 
-Sprint içi puan değerlendirmesi **45** olarak belirlenmiştir.
-
-Sprint içi puan değerlendirmesi **45** olarak belirlenmiştir.
+Sprint için puan değerlendirmesi **45** olarak belirlenmiştir.
 
 **Backlog Dağıtma ve Puan Tamamlama Mantığı:** Proje boyunca tamamlanması planlanan toplam backlog puanı **100** olarak belirlenmiştir. Sprint 1’de temel proje yapısı, ilk arayüzler ve proje yönetimi çalışmaları için **15 puanlık** backlog tamamlanmıştır. Sprint 2 için ürünün temel teknik işlevlerini çalışır hâle getirecek **45 puanlık** backlog seçilmiştir.
 
