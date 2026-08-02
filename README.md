@@ -314,13 +314,170 @@ Sprint Review katılımcıları:
 
 ---
 
-# Notlar
+# SPRINT 3
 
-Proje ilerledikçe her sprint sonunda aşağıdaki bölümler güncellenecektir:
+Sprint içi puan değerlendirmesi **40** olarak belirlenmiştir.
 
-- Sprint board screenshotları
-- Daily Scrum kayıtları
-- Ürün ekran görüntüleri
-- Sprint Review çıktıları
-- Sprint Retrospective kararları
-- Tamamlanan özellik listesi
+**Backlog Dağıtma ve Puan Tamamlama Mantığı:** Proje boyunca tamamlanması planlanan toplam backlog puanı **100** olarak belirlenmiştir. Sprint 1’de **15**, Sprint 2’de **45** puanlık çalışma tamamlanmıştır. Sprint 3 için kalan **40 puanlık** backlog; Learning Analytics, Flashcard Sistemi, Study Plan Generator, final entegrasyon, test, dokümantasyon ve teslim çalışmalarına ayrılmıştır.
+
+Sprint 3 backlog’u oluşturulurken mevcut Quiz, RAG, Course ve Document altyapıları temel alınmıştır. Analytics özelliği quiz sonuçlarına; Flashcard Sistemi işlenmiş doküman içeriğine; Study Plan Generator ise quiz yanlışları, flashcard ilerlemesi ve kullanıcının çalışma tercihlerine bağlı olduğu için geliştirme sırası bu teknik bağımlılıklara göre planlanmıştır.
+
+Görev dağılımında Eray Scrum Master, README ve final merge yönetimini; Esra Aydın flashcard üretimi ve çalışma planı servislerini; Esra Meriç Topaktaş Analytics, Flashcard ve Study Plan frontend ekranlarını; Eda bu özelliklerin route, model, schema ve migration yapılarını; Ege ise uygulama entegrasyonu, uçtan uca test, release doğrulaması ve sprint kanıtlarını üstlenmiştir.
+
+**Daily Scrum:** Sprint 3 döneminde Daily Scrum süreci kişi bazlı raporlama yöntemiyle yürütülmüştür. Her ekip üyesinin teknik ilerlemesi, günlük hedefleri, karşılaştığı engeller ve gün sonunda alınan ortak kararlar tarih bazlı olarak kayıt altına alınmıştır. Eray issue, blocker ve merge takibini yürütmüş; Ege ise üç yeni özelliğin entegrasyon, test, kalite ve release sürecini koordine etmiştir.
+
+**Toplantı ve Daily Scrum Dokümanı:**
+
+<details>
+  <summary>Sprint 3 kişi bazlı Daily Scrum dokümanını görüntülemek için tıklayın</summary>
+
+[StudyMate AI Sprint 3 Daily Scrum Dokümanı](docs/sprint3/StudyMate_AI_Sprint_3_Daily_Scrum_Son_Dagilim.docx)
+
+</details>
+
+**Tasarım ve Developing Mantığı:** Sprint 3’te yeni özelliklerin mevcut ürün akışına eklenmesine odaklanılmıştır. Analytics Dashboard, mevcut quiz sonuçlarından dinamik veriler üretmektedir. Flashcard Sistemi, dokümanlardan çalışma kartları oluşturarak öğrenildi ve tekrar edilmeli durumlarını takip etmektedir. Study Plan Generator ise ders seçimi, çalışma süresi, uygun günler, quiz yanlışları ve flashcard ilerlemesine göre kişiselleştirilmiş görevler oluşturmaktadır.
+
+Frontend tarafında yeni sayfalar hazırlanmış ve uygulama navigasyonuna bağlanmıştır. Backend tarafında yeni route, model, schema ve servis dosyaları eklenmiştir. Yeni router kayıtları uygulama başlangıç dosyasına bağlanmış; migration, clean-install, backend health, frontend build ve uçtan uca kullanıcı akışları final teslim öncesinde kontrol edilmiştir.
+
+**Sprint 3 board update: Sprint Board Screenshotları:**
+
+Sprint 3 başlangıcında Learning Analytics, Flashcard System, Study Plan Generator ve Final Deployment & Presentation kartları Current Sprint listesine alınmıştır.
+
+Sprint 3 backlog ve görev dağılımı görünümü:
+
+![Sprint 3 Board](docs/screenshots/sprint3-board-1.png)
+
+Sprint 3 görev akışı ve tamamlanan kartlar:
+
+![Sprint 3 Board 2](docs/screenshots/sprint3-board-2.png)
+
+**Ürün Durumu: Ekran Görüntüleri:**
+
+Learning Analytics ekranı:
+
+![Sprint 3 Analytics](docs/screenshots/sprint3-analytics.png)
+
+![Sprint 3 Analytics](docs/screenshots/sprint3-analytics2.png)
+
+Flashcard çalışma ekranı:
+
+![Sprint 3 Flashcards](docs/screenshots/sprint3-flashcards.png)
+
+Study Plan ekranı:
+
+![Sprint 3 Study Plan](docs/screenshots/sprint3-study-plan.png)
+
+![Sprint 3 Study Plan](docs/screenshots/sprint3-study-plan2.png)
+
+**Sprint 3’te Tamamlanan Teknik Özellikler:**
+
+- Quiz sonuçlarından genel başarı yüzdesinin hesaplanması
+- Ortalama quiz skoru ve toplam quiz verilerinin gösterilmesi
+- Ders ve konu bazlı performans analizi
+- En zayıf konunun belirlenmesi
+- Son yanlış cevapların ve açıklamaların gösterilmesi
+- Öğrenciye tekrar önerilerinin sunulması
+- Analytics Dashboard ve ders filtresi
+- Doküman içeriğinden flashcard oluşturulması
+- Flashcard model, schema, route ve servis yapısı
+- Kart ön ve arka yüzü arasında geçiş
+- Öğrenildi / tekrar edilmeli durumunun takip edilmesi
+- Review count ve son tekrar tarihinin saklanması
+- Flashcard ilerleme yüzdesinin gösterilmesi
+- Konu filtreleme ve kartları karıştırma
+- Kişiselleştirilmiş çalışma planı oluşturulması
+- Birden fazla ders seçimi
+- Plan süresi, günlük çalışma süresi ve çalışma günlerinin belirlenmesi
+- Quiz yanlışlarının ve öğrenilmemiş flashcard’ların önceliklendirilmesi
+- Konu tekrarı, flashcard çalışması ve kısa quiz görevlerinin oluşturulması
+- Görev ve gün tamamlama akışı
+- Plan ilerleme yüzdesinin hesaplanması
+- Yeni backend router’larının uygulamaya bağlanması
+- Final migration, clean-install ve backend health kontrolleri
+- Analytics, Flashcard ve Study Plan backend API ve entegrasyon testleri
+- Final frontend build, smoke test ve release doğrulaması
+
+**Sprint 3 Takım Görev Dağılımı:**
+
+- **Eray Gürbüz:** Scrum Master, issue ve blocker takibi, README Sprint 3 güncellemesi, pull request ve final merge yönetimi
+- **Esra Aydın:** Flashcard üretim servisi, Study Plan üretim ve önceliklendirme servisi, AI servislerinin final doğrulaması
+- **Esra Meriç Topaktaş:** Analytics, Flashcard ve Study Plan frontend sayfaları, App navigasyonu, Dashboard bağlantıları ve frontend kullanıcı akışı
+- **Eda Dilek:** Analytics, Flashcard ve Study Plan route yapıları; Flashcard ve Study Plan model/schema dosyaları; model kayıtları ve migration
+- **Ege Onur Ünser:** Yeni router’ların uygulamaya entegrasyonu, Analytics, Flashcard ve Study Plan backend API, entegrasyon ve smoke testleri, migration ve clean-install doğrulaması, backend health, smoke test, release checklist
+
+**Sprint Review:**
+
+Sprint 3 sonunda StudyMate AI’ın kişiselleştirilmiş öğrenme özellikleri tamamlanmıştır. Kullanıcılar quiz sonuçlarını yalnızca skor olarak görüntülemek yerine ders ve konu bazlı performanslarını, en zayıf konularını, son yanlış cevaplarını ve tekrar önerilerini Analytics Dashboard üzerinden takip edebilmektedir.
+
+Flashcard Sistemi ile işlenmiş dokümanlardan çalışma kartları oluşturulabilmekte, kartların ön ve arka yüzleri görüntülenebilmekte ve öğrenme ilerlemesi kullanıcı bazında saklanabilmektedir.
+
+Study Plan Generator ile kullanıcı; çalışmak istediği dersleri, plan süresini, günlük çalışma süresini ve uygun günlerini belirleyebilmektedir. Sistem, quiz yanlışlarını ve öğrenilmemiş flashcard’ları dikkate alarak konu tekrarı, flashcard çalışması ve kısa quiz görevlerinden oluşan kişiselleştirilmiş bir çalışma programı hazırlamaktadır.
+
+Sprint 3 sonunda tamamlanan final ürün akışı:
+
+```text
+Kayıt / Giriş
+↓
+Ders Oluşturma
+↓
+PDF Yükleme ve İşleme
+↓
+RAG Chat ve Kaynak Gösterimi
+↓
+Quiz Oluşturma ve Çözme
+↓
+Analytics ve Zayıf Konu Analizi
+↓
+Flashcard Çalışması
+↓
+Kişiselleştirilmiş Study Plan
+↓
+İlerleme ve Tekrar Takibi
+```
+
+Sprint Review kapsamında Analytics, Flashcard ve Study Plan özelliklerinin backend–frontend entegrasyonu; migration, clean-install, Docker çalışma ortamı, backend health, frontend build ve ana kullanıcı akışları test edilmiştir.
+
+Sprint Review katılımcıları:
+
+- Eray Gürbüz
+- Esra Aydın
+- Esra Meriç Topaktaş
+- Eda Dilek
+- Ege Onur Ünser
+
+**Sprint Retrospective:**
+
+### Teknik Kararlar ve Öğrenimler
+
+- Sprint 2’de tamamlanan RAG ve Quiz altyapısının Sprint 3 özellikleri için sağlam bir temel oluşturduğu görülmüştür.
+- Analytics verilerinin ayrı bir tablo yerine mevcut quiz sonuçlarından dinamik olarak hesaplanmasının veri tekrarını azalttığı ve sistem yapısını sade tuttuğu değerlendirilmiştir.
+- Flashcard ilerlemesinin kullanıcı ve kart bazında saklanmasının kişisel öğrenme takibi açısından faydalı olduğu görülmüştür.
+- Study Plan görevlerinin quiz yanlışları ve flashcard ilerlemesiyle ilişkilendirilmesinin ürünün kişiselleştirme yönünü güçlendirdiği belirlenmiştir.
+- Yeni özelliklerin entegrasyon sonrasında backend API, smoke test ve final build kontrollerinden geçirilmesinin final teslim kalitesini artırdığı görülmüştür.
+
+### Süreç ve Ekip Dinamikleri
+
+#### Neleri İyi Yaptık?
+
+- Sprint 2’de kullanılan kişi bazlı Daily Scrum raporlama yöntemine Sprint 3’te de devam edilmiştir. Bu yöntem sayesinde ekip üyelerinin yaptığı işler, sıradaki görevleri ve karşılaştığı engeller daha görünür hâle gelmiş; görev takibi kolaylaşmıştır.
+- Görevlerin backend, frontend, AI servisleri, entegrasyon/test ve Scrum yönetimi şeklinde ayrılması ekip üyelerinin sorumluluk alanlarını netleştirmiştir.
+- Eray’ın issue, blocker ve final merge takibini; Ege’nin ise entegrasyon, test, kalite ve release kontrollerini yürütmesi final teslim sürecinin daha düzenli ilerlemesini sağlamıştır.
+
+#### Nerede Zorlandık / Ne Bizi Yavaşlattı?
+
+- Analytics, Flashcard ve Study Plan özelliklerinin birbirine bağlı olması nedeniyle bazı frontend geliştirmelerinde backend response yapılarının kesinleşmesi beklenmiştir.
+- Yeni route, model, schema ve migration dosyalarının aynı sprint içerisinde entegre edilmesi final doğrulama sürecinde ek kontrol gerektirmiştir.
+- Responsive görünüm, boş veri senaryoları, kullanıcı yetkilendirmesi ve farklı veri durumlarının kontrol edilmesi test süresini artırmıştır.
+
+#### Gelecekte Neyi Farklı Yapardık?
+
+- Backend ve frontend geliştirmelerine başlamadan önce API request/response sözleşmeleri daha erken kesinleştirilecektir.
+- Test senaryoları sprint sonunda toplu olarak hazırlanmak yerine özellik geliştirmeleriyle paralel oluşturulacaktır.
+- Backend API ve entegrasyon testlerinin daha erken aşamada repository’ye eklenmesiyle hataların daha hızlı tespit edilmesi hedeflenecektir.
+- Definition of Done kriterleri geliştirme, test ve dokümantasyon gereksinimlerini kapsayacak şekilde sprint başlangıcında daha ayrıntılı belirlenecektir.
+
+### Süreç İyileştirmelerinin Etkisi
+
+Sprint 3 boyunca kişi bazlı Daily Scrum raporlama yönteminin devam ettirilmesi, görevlerin hangi aşamada olduğunun ve mevcut blocker’ların daha kolay takip edilmesini sağlamıştır. Böylece ekip içindeki bilgi akışı daha düzenli hâle gelmiş ve birbirine bağımlı görevlerde oluşabilecek gecikmeler daha erken fark edilmiştir.
+
+Geliştirme ile test/release sorumluluklarının ayrılması, tamamlanan özelliklerin farklı bir bakış açısıyla kontrol edilmesini sağlamıştır. Bu yaklaşım sayesinde final teslim sürecinde yalnızca kodun tamamlanmasına değil, yeni özelliklerin mevcut sistemle birlikte çalışmasının doğrulanmasına da odaklanılmıştır.
