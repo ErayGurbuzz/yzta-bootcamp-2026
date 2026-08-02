@@ -35,7 +35,13 @@ DERS NOTLARI:
 {context}
 """.strip()
         data = LLMService().generate_json(prompt)
-        generated = data.get("cards", [])
+   
+        if isinstance(data, list):
+            generated = data
+        elif isinstance(data, dict):
+            generated = data.get("cards", [])
+        else:
+            generated = []
         if not isinstance(generated, list) or not generated:
             raise ValueError("Yapay zekâ geçerli flashcard üretemedi")
 

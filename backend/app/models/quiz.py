@@ -56,7 +56,7 @@ class QuizAnswer(Base):
     id: Mapped[int] = mapped_column(primary_key=True, index=True)
     attempt_id: Mapped[int] = mapped_column(ForeignKey("quiz_attempts.id"), index=True, nullable=False)
     question_id: Mapped[int] = mapped_column(ForeignKey("quiz_questions.id"), index=True, nullable=False)
-    user_answer: Mapped[str] = mapped_column(String(100), nullable=False)
+    user_answer: Mapped[str] = mapped_column(Text, nullable=False)
     is_correct: Mapped[bool] = mapped_column(default=False)
     correct_answer: Mapped[str] = mapped_column(String(100), nullable=False)
     explanation: Mapped[str] = mapped_column(Text, nullable=False)
